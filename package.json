@@ -1,0 +1,27 @@
+{
+  "name": "karma-lodash-template-preprocessor",
+  "version": "0.1.0",
+  "description": "A Karma plugin. Compile Lo-Dash templates on the fly.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deltaidea/karma-lodash-template-preprocessor.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-preprocessor",
+    "lodash"
+  ],
+  "author": {
+    "name": "Nikita Litvin",
+    "email": "deltaidea@derpy.ru",
+    "url": "https://github.com/deltaidea"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1"
+  },
+  "peerDependencies": {
+    "karma": ">=0.9"
+  },
+  "license": "MIT"
+}
