@@ -1,6 +1,6 @@
 {
   "name": "karma-lodash-template-preprocessor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Karma plugin. Compile Lo-Dash templates on the fly.",
   "main": "index.js",
   "repository": {
