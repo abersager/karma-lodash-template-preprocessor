@@ -9,7 +9,7 @@ var lodash = require( "lodash" ),
 				return path.replace( /\.template\./i, "." );
 			};
 
-		if ( _.isEmpty( data ) ) {
+		if ( lodash.isEmpty( data ) ) {
 			log.error( "No data specified for Lo-Dash!" );
 			return;
 		}
