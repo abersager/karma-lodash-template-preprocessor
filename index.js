@@ -1,11 +1,15 @@
 var lodash = require( "lodash" ),
 	createLodashPreprocessor = function( args, config, logger ) {
+        "use strict";
+
 		config = config || {};
 
 		var log = logger.create( "preprocessor.lodash" ),
 			options = lodash.merge( args.options || {}, config.options || {} ),
-			data = lodash.merge( args.data || {}, config.data || {} ),
-			transformPath = options.transformPath || function( path ) {
+            argsData = args.data ? lodash.result(args, 'data') : {},
+            configData = config.data ? lodash.result(config, 'data') : {},
+			data = lodash.merge(argsData, configData),
+			transformPath = args.transformPath || config.transformPath || function( path ) {
 				return path.replace( /\.template\./i, "." );
 			};
 
