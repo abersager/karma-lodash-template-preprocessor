@@ -20,6 +20,7 @@ module.exports = function( config ) {
     },
 
     lodashPreprocessor: {
+      // Template data. You can use function, which returns object
       data: {
         "this will be passed": "to _.template as second argument"
       },
