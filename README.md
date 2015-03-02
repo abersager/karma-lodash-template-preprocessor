@@ -10,7 +10,8 @@ npm install karma-lodash-template-preprocessor --save-dev
 ```
 
 ## Configuration
-Following code shows the default configuration.
+Following code shows all configuration options:
+
 ```js
 // karma.conf.js
 module.exports = function( config ) {
@@ -21,10 +22,18 @@ module.exports = function( config ) {
 
     lodashPreprocessor: {
       // Template data. You can use function, which returns object
+      // When omitted, templates are compiled into functions that take data
+      // arguments.
       data: {
         "this will be passed": "to _.template as second argument"
       },
-      // Options passed to the _.template function as third argument:
+
+      // Name of global namespace object that template functions are attached
+      // to. Only useful in conjunction with compiled function (i.e. when no
+      // data object is defined).
+      globalVariable: 'JST'
+
+      // Options set as _.templateSettings
       options: {
         interpolate: /regexp/,
         variable: "info"
